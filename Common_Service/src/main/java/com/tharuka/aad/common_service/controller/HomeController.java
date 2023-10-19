@@ -5,14 +5,17 @@ import com.tharuka.aad.common_service.dto.UserDTO;
 import com.tharuka.aad.common_service.service.TravelPackageService;
 import com.tharuka.aad.common_service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
 @CrossOrigin("*")
 @RequestMapping(value = "/home")
 public class HomeController {
-   /* @Autowired
+    @Autowired
     private TravelPackageService travelPackageService;
     @Autowired
     private UserService userService;
@@ -30,7 +33,7 @@ public class HomeController {
     @PostMapping(value = "/create-user")
     public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO){
         return userService.createUser(userDTO);
-    }*/
+    }
     //    @GetMapping("/get-vehicles")
 //    public List<TravelPackageDTO> getAllVehiclesByType(){
 //        return travelPackageService.getAllTravelPackages();

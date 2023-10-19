@@ -1,8 +1,8 @@
 package com.tharuka.aad.travel_service.controller;
 
-import com.tharuka.aad.travelservice.entity.TravelPackage;
-import com.tharuka.aad.travelservice.service.TravelPackageService;
-import com.tharuka.aad.travelservice.util.Response;
+import com.tharuka.aad.travel_service.entity.TravelPackage;
+import com.tharuka.aad.travel_service.service.TravelPackageService;
+import com.tharuka.aad.travel_service.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
