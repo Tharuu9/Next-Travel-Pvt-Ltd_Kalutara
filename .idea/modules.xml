@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Next-Travel-Pvt-Ltd_Kalutara.iml" filepath="$PROJECT_DIR$/Next-Travel-Pvt-Ltd_Kalutara.iml" />
+      <module fileurl="file://$PROJECT_DIR$/User_Service/User_Service.iml" filepath="$PROJECT_DIR$/User_Service/User_Service.iml" />
+    </modules>
+  </component>
+</project>
