@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Cloud_Gateway/Cloud_Gateway.iml" filepath="$PROJECT_DIR$/Cloud_Gateway/Cloud_Gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/Next-Travel-Pvt-Ltd_Kalutara.iml" filepath="$PROJECT_DIR$/Next-Travel-Pvt-Ltd_Kalutara.iml" />
       <module fileurl="file://$PROJECT_DIR$/User_Service/User_Service.iml" filepath="$PROJECT_DIR$/User_Service/User_Service.iml" />
     </modules>

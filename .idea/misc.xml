@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/User_Service/pom.xml" />
+        <option value="$PROJECT_DIR$/Cloud_Gateway/pom.xml" />
       </list>
     </option>
   </component>
