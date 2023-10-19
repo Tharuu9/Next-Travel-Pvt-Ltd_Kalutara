@@ -1,4 +1,6 @@
 package com.tharuka.aad.driver_service.service.impl;
 
-public class DriverServiceImpl {
+import com.tharuka.aad.driver_service.service.DriverService;
+
+public class DriverServiceImpl implements DriverService {
 }
