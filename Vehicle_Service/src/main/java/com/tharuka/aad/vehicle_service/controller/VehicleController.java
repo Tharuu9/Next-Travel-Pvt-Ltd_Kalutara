@@ -1,6 +1,9 @@
 package com.tharuka.aad.vehicle_service.controller;
 
 
+import com.tharuka.aad.vehicle_service.entity.Vehicle;
+import com.tharuka.aad.vehicle_service.service.VehicleService;
+import com.tharuka.aad.vehicle_service.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

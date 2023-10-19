@@ -10,4 +10,8 @@ import lombok.ToString;
 @Data
 @ToString
 public class Response {
+    private String status;
+    private String message;
+    private Object data;
+
 }
