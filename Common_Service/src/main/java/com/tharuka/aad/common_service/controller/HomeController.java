@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin("*")
 @RequestMapping(value = "/home")
 public class HomeController {
-    @Autowired
+   /* @Autowired
     private TravelPackageService travelPackageService;
     @Autowired
     private UserService userService;
@@ -30,7 +30,7 @@ public class HomeController {
     @PostMapping(value = "/create-user")
     public ResponseEntity<UserDTO> createUser(@RequestBody UserDTO userDTO){
         return userService.createUser(userDTO);
-    }
+    }*/
     //    @GetMapping("/get-vehicles")
 //    public List<TravelPackageDTO> getAllVehiclesByType(){
 //        return travelPackageService.getAllTravelPackages();
