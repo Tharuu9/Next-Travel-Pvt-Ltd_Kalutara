@@ -7,20 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Service_Registry" />
+        <module name="Vehicle_Service" />
+        <module name="User_Service" />
+        <module name="Driver_Service" />
         <module name="Common_Service" />
         <module name="Travel_Service" />
-        <module name="User_Service" />
         <module name="Cloud_Gateway" />
-        <module name="Driver_Service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Cloud_Gateway" target="17" />
       <module name="Common_Service" target="17" />
       <module name="Driver_Service" target="17" />
+      <module name="Service_Registry" target="17" />
       <module name="travel_Service" target="17" />
       <module name="Travel_Service" target="17" />
       <module name="User_Service" target="17" />
+      <module name="Vehicle_Service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -28,8 +32,10 @@
       <module name="Cloud_Gateway" options="-parameters" />
       <module name="Common_Service" options="-parameters" />
       <module name="Driver_Service" options="-parameters" />
+      <module name="Service_Registry" options="-parameters" />
       <module name="Travel_Service" options="-parameters" />
       <module name="User_Service" options="-parameters" />
+      <module name="Vehicle_Service" options="-parameters" />
       <module name="travel_Service" options="-parameters" />
     </option>
   </component>
