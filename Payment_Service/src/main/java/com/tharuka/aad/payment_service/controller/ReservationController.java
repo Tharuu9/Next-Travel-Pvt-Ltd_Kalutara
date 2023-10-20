@@ -27,6 +27,14 @@ public class ReservationController {
         return new Response(HttpStatus.SERVICE_UNAVAILABLE,"Can't Edited..!",null);
     }
 
+    @PutMapping(value = "/cancel")
+    public Reservation cancelReservation(@RequestParam String reservationId){
+        if (findDateDifference(reservationId)){
+            return reservationService.cancelReservation(reservationId);
+        }
+        return null;
+    }
+
     private boolean findDateDifference(String valueOf) {
     }
 
