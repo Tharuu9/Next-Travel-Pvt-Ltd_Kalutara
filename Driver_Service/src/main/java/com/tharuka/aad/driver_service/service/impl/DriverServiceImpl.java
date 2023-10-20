@@ -14,8 +14,8 @@ public class DriverServiceImpl implements DriverService {
     @Autowired
     private DriverRepository driverRepo;
     @Override
-    public void addDriver(Driver driver) {
-        driverRepo.save(driver);
+    public Driver addDriver(Driver driver) {
+        return driverRepo.save(driver);
     }
 
     @Override

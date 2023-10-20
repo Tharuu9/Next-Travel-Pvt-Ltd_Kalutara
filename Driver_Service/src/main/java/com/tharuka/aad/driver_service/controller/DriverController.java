@@ -6,6 +6,8 @@ import com.tharuka.aad.driver_service.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin("*")
 @RequestMapping(value = "/driver")
@@ -15,14 +17,14 @@ public class DriverController {
     private DriverService driverService;
 
     @PostMapping(value = "/add_driver")
-    public Response addDriver(@ModelAttribute Driver driver) {
-        driverService.addDriver(driver);
-        return new Response("Ok","Successfully Registered..!",null);
+    public Response addDriver(@RequestBody Driver driver) {
+        return new Response("Ok","Successfully Registered..!",driverService.addDriver(driver));
     }
 
     @GetMapping("fetch_driver")
-    public Response fetchAllUsers() {
-        return new Response("Ok","Done",driverService.fetchAllDriver());
+    public List<Driver> fetchAllUsers() {
+//        return new Response("Ok","Done",
+                return driverService.fetchAllDriver();
     }
 
     @GetMapping(value = "/check")
