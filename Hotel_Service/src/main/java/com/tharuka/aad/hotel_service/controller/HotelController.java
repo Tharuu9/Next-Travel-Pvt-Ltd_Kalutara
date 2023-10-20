@@ -19,4 +19,9 @@ public class HotelController {
         hotelService.addHotel(hotel);
         return new Response("Ok","Added..!",null);
     }
+
+    @GetMapping
+    public Response fetchAllHotel(){
+        return new Response("Ok","Done..!",hotelService.fetchAllHotel());
+    }
 }
