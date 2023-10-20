@@ -8,5 +8,5 @@ public interface HotelService {
 
     Hotel addHotel(Hotel hotel);
     List<Hotel> fetchAllHotel();
-    boolean checkExixtHotel(Integer hotelId,String name);
+    boolean checkExistsHotel(Integer hotelId,String name);
 }
