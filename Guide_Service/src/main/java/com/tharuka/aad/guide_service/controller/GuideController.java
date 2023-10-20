@@ -17,4 +17,9 @@ public class GuideController {
     public Guide addGuide(@RequestBody Guide guide){
         return guideService.addGuide(guide);
     }
+
+    @PutMapping(value = "/update_guide")
+    public Guide updateGuide(@RequestBody Guide guide){
+        return guideService.updateGuide(guide);
+    }
 }
