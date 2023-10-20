@@ -13,6 +13,7 @@
         <module name="User_Service" />
         <module name="Driver_Service" />
         <module name="Common_Service" />
+        <module name="Hotel_Service" />
         <module name="Travel_Service" />
         <module name="Cloud_Gateway" />
         <module name="Payment_Service" />
@@ -23,6 +24,7 @@
       <module name="Common_Service" target="17" />
       <module name="Driver_Service" target="17" />
       <module name="Guide_Service" target="17" />
+      <module name="Hotel_Service" target="17" />
       <module name="Payment_Service" target="17" />
       <module name="Service_Registry" target="17" />
       <module name="travel_Service" target="17" />
@@ -37,6 +39,7 @@
       <module name="Common_Service" options="-parameters" />
       <module name="Driver_Service" options="-parameters" />
       <module name="Guide_Service" options="-parameters" />
+      <module name="Hotel_Service" options="-parameters" />
       <module name="Payment_Service" options="-parameters" />
       <module name="Service_Registry" options="-parameters" />
       <module name="Travel_Service" options="-parameters" />
