@@ -24,4 +24,9 @@ public class HotelController {
     public Response fetchAllHotel(){
         return new Response("Ok","Done..!",hotelService.fetchAllHotel());
     }
+
+    @GetMapping(value = "/check")
+    public Boolean checkHotelExists(@RequestParam Integer hotelId,@RequestParam String name){
+        return hotelService.checkExistsHotel(hotelId,name);
+    }
 }
