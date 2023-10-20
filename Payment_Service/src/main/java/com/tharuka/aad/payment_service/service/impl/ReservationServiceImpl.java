@@ -1,7 +1,9 @@
 package com.tharuka.aad.payment_service.service.impl;
 
 import com.tharuka.aad.payment_service.entity.Reservation;
+import com.tharuka.aad.payment_service.repository.ReservationRepository;
 import com.tharuka.aad.payment_service.service.ReservationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,6 +12,9 @@ import java.util.Date;
 @Service
 @Transactional
 public class ReservationServiceImpl implements ReservationService {
+
+    @Autowired
+    private ReservationRepository reservationRepository;
     @Override
     public Reservation makeReservation(Reservation reservation) {
         return null;
@@ -27,6 +32,6 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public Date getReservedDate(String reservationId) {
-        return null;
+        return reservationRepository.getReservedDateByReservationId(reservationId);
     }
 }
