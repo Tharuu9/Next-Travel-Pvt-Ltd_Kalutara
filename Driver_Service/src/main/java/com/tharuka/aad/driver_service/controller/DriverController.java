@@ -21,7 +21,7 @@ public class DriverController {
         return new Response("Ok","Successfully Registered..!",driverService.addDriver(driver));
     }
 
-    @GetMapping("fetch_driver")
+    @GetMapping(value = "/fetch_driver")
     public List<Driver> fetchAllUsers() {
 //        return new Response("Ok","Done",
                 return driverService.fetchAllDriver();
