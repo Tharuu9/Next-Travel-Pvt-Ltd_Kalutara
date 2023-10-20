@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
+
 @RestController
 @RequestMapping(value = "/reservation")
 public class ReservationController {
@@ -35,7 +37,18 @@ public class ReservationController {
         return null;
     }
 
-    private boolean findDateDifference(String valueOf) {
+    private boolean findDateDifference(String reservationId) {
+
+        Date start_date = reservationService.getReservedDate(reservationId);
+        Date end_date = new Date();
+        long difference_In_Time = end_date.getTime() - start_date.getTime();
+        long difference_In_Days = (difference_In_Time / (1000 * 60 * 60 * 24)) % 365;
+
+        if (difference_In_Days < 2){
+            return true;
+        }
+        return false;
+
     }
 
 }
