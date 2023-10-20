@@ -1,4 +1,9 @@
 package com.tharuka.aad.guide_service.repository;
 
-public interface GuideRepository {
+import com.tharuka.aad.guide_service.entity.Guide;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+
+@EnableMongoRepositories
+public interface GuideRepository extends MongoRepository<Guide, String> {
 }
