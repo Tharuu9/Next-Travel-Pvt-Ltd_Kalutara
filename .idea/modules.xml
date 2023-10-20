@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Cloud_Gateway/Cloud_Gateway.iml" filepath="$PROJECT_DIR$/Cloud_Gateway/Cloud_Gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/Common_Service/Common_Service.iml" filepath="$PROJECT_DIR$/Common_Service/Common_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Driver_Service/Driver_Service.iml" filepath="$PROJECT_DIR$/Driver_Service/Driver_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Guide_Service/Guide_Service.iml" filepath="$PROJECT_DIR$/Guide_Service/Guide_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Next-Travel-Pvt-Ltd_Kalutara.iml" filepath="$PROJECT_DIR$/Next-Travel-Pvt-Ltd_Kalutara.iml" />
       <module fileurl="file://$PROJECT_DIR$/Service_Registry/Service_Registry.iml" filepath="$PROJECT_DIR$/Service_Registry/Service_Registry.iml" />
       <module fileurl="file://$PROJECT_DIR$/Travel_Service/Travel_Service.iml" filepath="$PROJECT_DIR$/Travel_Service/Travel_Service.iml" />
