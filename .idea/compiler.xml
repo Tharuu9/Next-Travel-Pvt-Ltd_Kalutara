@@ -12,7 +12,6 @@
         <module name="Vehicle_Service" />
         <module name="User_Service" />
         <module name="Driver_Service" />
-        <module name="Common_Service" />
         <module name="Hotel_Service" />
         <module name="Travel_Service" />
         <module name="Cloud_Gateway" />

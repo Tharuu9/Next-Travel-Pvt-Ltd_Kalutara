@@ -4,7 +4,9 @@ import com.tharuka.aad.driver_service.entity.Driver;
 import com.tharuka.aad.driver_service.service.DriverService;
 import com.tharuka.aad.driver_service.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -16,9 +18,12 @@ public class DriverController {
     @Autowired
     private DriverService driverService;
 
-    @PostMapping(value = "/add_driver")
-    public Response addDriver(@RequestBody Driver driver) {
-        return new Response("Ok","Successfully Registered..!",driverService.addDriver(driver));
+    @PostMapping(value = "/add_driver", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE, MediaType.MULTIPART_FORM_DATA_VALUE})
+    public Response addDriver(Driver driver, @RequestPart ("imgFile")MultipartFile file) {
+        try {
+            String projectPath = "Driver_Service\\src\\main\\resources\\STATIC\\uploads";
+        }
+        return new Response("Ok","Driver Successfully Registered..!",driverService.addDriver(driver));
     }
 
     @GetMapping(value = "/fetch_driver")
