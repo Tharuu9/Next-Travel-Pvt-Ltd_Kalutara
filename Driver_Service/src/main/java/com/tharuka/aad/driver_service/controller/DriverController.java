@@ -8,6 +8,8 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -22,8 +24,15 @@ public class DriverController {
     public Response addDriver(Driver driver, @RequestPart ("imgFile")MultipartFile file) {
         try {
             String projectPath = "Driver_Service\\src\\main\\resources\\STATIC\\uploads";
+            File uploadsDir = new File(projectPath);
+            uploadsDir.mkdir();
+            file.transferTo(new File(uploadsDir.getParentFile() + "/" + file.getOriginalFilename()));
+            driver.setDrivingLicenseImg("uploads/" + file.getOriginalFilename());
+            return new Response("Ok","Driver Successfully Registered..!",driverService.addDriver(driver));
+        }catch (IOException e){
+            throw new RuntimeException(e);
+
         }
-        return new Response("Ok","Driver Successfully Registered..!",driverService.addDriver(driver));
     }
 
     @GetMapping(value = "/fetch_driver")

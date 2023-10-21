@@ -20,6 +20,7 @@ public class Driver {
     private String nic;
     private String address;
     private String status;
-    private String drivingLicenseFrontImg;
-    private String drivingLicenseRearImg;
+    private String drivingLicenseImg;
+//    private String drivingLicenseFrontImg;
+//    private String drivingLicenseRearImg;
 }
