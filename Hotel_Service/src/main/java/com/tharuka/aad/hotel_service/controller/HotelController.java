@@ -14,10 +14,9 @@ public class HotelController {
     @Autowired
     private HotelService hotelService;
 
-    @PostMapping("/add")
+    @PostMapping("/add_hotel")
     public Response addHotel(@RequestBody Hotel hotel){
-        hotelService.addHotel(hotel);
-        return new Response("Ok","Added..!",null);
+        return new Response("Ok","Added..!",hotelService.addHotel(hotel));
     }
 
     @GetMapping
