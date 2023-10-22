@@ -21,7 +21,13 @@ public class HotelController {
 
     @PutMapping(value = "/update_hotel")
     public Response updateHotel(@RequestBody Hotel hotel){
-        return new Response("Ok","Done",hotelService.updateHotel(hotel));
+        return new Response("Ok","Done..!",hotelService.updateHotel(hotel));
+    }
+
+    @DeleteMapping(value = "/delete_hotel")
+    public Response deleteHotel(@RequestParam String hotelId){
+        hotelService.deleteHotel(Integer.valueOf(hotelId));
+        return new Response("Ok","Deleted..!",null);
     }
 
     @GetMapping(value = "/view_all")
