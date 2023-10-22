@@ -7,6 +7,9 @@ import java.util.List;
 public interface HotelService {
 
     Hotel addHotel(Hotel hotel);
+
+    Hotel updateHotel(Hotel hotel);
+    void deleteHotel(Integer hotelId);
     List<Hotel> fetchAllHotel();
     boolean checkExistsHotel(Integer hotelId,String name);
 }
