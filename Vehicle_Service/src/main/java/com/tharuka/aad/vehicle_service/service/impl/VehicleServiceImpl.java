@@ -10,7 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
 public class VehicleServiceImpl implements VehicleService {
     @Autowired
     private VehicleRepository vehicleRepo;
