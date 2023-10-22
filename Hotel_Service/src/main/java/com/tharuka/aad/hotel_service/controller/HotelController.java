@@ -14,12 +14,14 @@ public class HotelController {
     @Autowired
     private HotelService hotelService;
 
-    @PostMapping("/add_hotel")
+    @PostMapping(value = "/add_hotel")
     public Response addHotel(@RequestBody Hotel hotel){
         return new Response("Ok","Added..!",hotelService.addHotel(hotel));
     }
 
-    @GetMapping
+
+
+    @GetMapping(value = "/view_all")
     public Response fetchAllHotel(){
         return new Response("Ok","Done..!",hotelService.fetchAllHotel());
     }
