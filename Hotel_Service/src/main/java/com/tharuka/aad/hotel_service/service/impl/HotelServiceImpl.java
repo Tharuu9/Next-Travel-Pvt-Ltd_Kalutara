@@ -16,10 +16,17 @@ public class HotelServiceImpl implements HotelService {
 
     @Override
     public Hotel addHotel(Hotel hotel) {
-        if (hotelRepository.existsByIdAndName(hotel.getId(),hotel.getName())){
-            return hotelRepository.save(hotel);
-        }
-        throw new RuntimeException("Hotel Already Exists..!");
+        return hotelRepository.save(hotel);
+    }
+
+    @Override
+    public Hotel updateHotel(Hotel hotel) {
+        return hotelRepository.save(hotel);
+    }
+
+    @Override
+    public void deleteHotel(Integer hotelId) {
+        hotelRepository.deleteById(hotelId);
     }
 
     @Override
