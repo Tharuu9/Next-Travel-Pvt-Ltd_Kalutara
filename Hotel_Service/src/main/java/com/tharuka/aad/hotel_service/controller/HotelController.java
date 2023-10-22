@@ -19,7 +19,10 @@ public class HotelController {
         return new Response("Ok","Added..!",hotelService.addHotel(hotel));
     }
 
-
+    @PutMapping(value = "/update_hotel")
+    public Response updateHotel(@RequestBody Hotel hotel){
+        return new Response("Ok","Done",hotelService.updateHotel(hotel));
+    }
 
     @GetMapping(value = "/view_all")
     public Response fetchAllHotel(){
