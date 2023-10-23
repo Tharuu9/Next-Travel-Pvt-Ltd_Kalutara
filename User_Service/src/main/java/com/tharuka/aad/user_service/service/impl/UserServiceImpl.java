@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User updateUser(User user) {
-        if (!userRepository.existsByUserName(user.getUserName())){
+        if (!userRepository.existsById(user.getId())){
             throw new RuntimeException("User Not Found..!");
         }
         return userRepository.save(user);
@@ -44,10 +44,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean checkLogin(String userName, String password) {
-        if (!userRepository.existsByUserName(userName)){
+    public User checkLogin(String userName, String password) {
+        if (!userRepository.existsUserByUserNameAndPassword(userName,password)){
             throw new RuntimeException("User Not Found..!");
         }
-        return userRepository.existsUserByUserNameAndPassword(userName, password);
+        return userRepository.findByUserNameAndPassword(userName, password);
     }
 }
