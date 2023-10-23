@@ -50,4 +50,9 @@ public class UserServiceImpl implements UserService {
         }
         return userRepository.findByUserNameAndPassword(userName, password);
     }
+
+    @Override
+    public Object searchUser(Integer id) {
+        return userRepository.findById(id);
+    }
 }

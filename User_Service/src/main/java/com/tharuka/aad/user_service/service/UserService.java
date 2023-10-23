@@ -14,4 +14,6 @@ public interface UserService {
     List<User> fetchAllUsers();
 
     User checkLogin(String userName, String password);
+
+    Object searchUser(Integer id);
 }
