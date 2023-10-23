@@ -26,11 +26,23 @@ spring:
         - id: HOTEL-SERVICE
           uri: lb://HOTEL-SERVICE
           predicates:
-                  - Path=/hotel/**
+            - Path=/hotel/**
         - id: DRIVER-SERVICE
           uri: lb://DRIVER-SERVICE
           predicates:
-                  - Path=/driver/**
+            - Path=/driver/**
+        - id: PAYMENT-SERVICE
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/**
+        - id: GUIDE-SERVICE
+          uri: lb://GUIDE-SERVICE
+          predicates:
+            - Path=/guide/**
+        - id: image-service
+          uri: file:///H:\My Projects\Next\Next_Travel\Next Travel Pvt. Ltd\Driver Service\uploads
+          predicates:
+            - Path=/uploads/**
 eureka:
   client:
     register-with-eureka: true
