@@ -37,6 +37,7 @@ public class VehicleController {
     public Response fetchAllVehicle() {
         return new Response("Ok", "", vehicleService.fetchAllVehicle());
     }
+
     @GetMapping(value ="search_Vehicle" )
     public Response searchVehicle(Integer id){
         return  new Response("Ok","Done..!",vehicleService.searchVehicleById(id));
