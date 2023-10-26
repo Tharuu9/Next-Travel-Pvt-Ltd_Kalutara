@@ -18,14 +18,13 @@ public class Reservation {
 
     @Id
     private int reservationId;
+    private String packageId;
     private String hotelId;
-    private String hotelName;
     private String vehicleRegNumber;
-    private String userName;
-    private String idNumOrPassportNumber;
+    private String userId;
     private String status;
     private double totalAmount;
-    private String driverName;
-    private int headCount;
+    private String driverId;
+    private String guideId;
     private Date reservedDate;
 }
