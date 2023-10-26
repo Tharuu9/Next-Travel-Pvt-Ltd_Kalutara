@@ -14,9 +14,14 @@ public class GuideController {
     @Autowired
     private GuideService guideService;
 
-    @PostMapping(value = "/add_guide")
-    public Response addGuide(@RequestBody Guide guide){
-        return new Response("OK","Guide Added..!",guideService.addGuide(guide));
+//    @PostMapping(value = "/add_guide")
+//    public Response addGuide(@RequestBody Guide guide){
+//        return new Response("OK","Guide Added..!",guideService.addGuide(guide));
+//    }
+
+   @PostMapping(value = "/save_guide")
+    public void saveGuide(@ModelAttribute Guide guide){
+        guideService.addGuide(guide);
     }
 
     @PutMapping(value = "/update_guide")
