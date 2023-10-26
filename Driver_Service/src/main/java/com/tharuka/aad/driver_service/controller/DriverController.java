@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
@@ -23,15 +24,17 @@ public class DriverController {
     @PostMapping(value = "/add_driver", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE, MediaType.MULTIPART_FORM_DATA_VALUE})
     public Response addDriver(Driver driver, @RequestPart ("imgFile")MultipartFile file) {
         try {
-            String projectPath = "Driver_Service\\src\\main\\resources\\STATIC\\uploads";
-            File uploadsDir = new File(projectPath);
+            String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
+            File uploadsDir = new File(projectPath + "/uploads");
             uploadsDir.mkdir();
-            file.transferTo(new File(uploadsDir.getParentFile() + "/" + file.getOriginalFilename()));
+            file.transferTo(new File(uploadsDir.getAbsoluteFile() + "/" + file.getOriginalFilename()));
             driver.setDrivingLicenseImg("uploads/" + file.getOriginalFilename());
             return new Response("Ok","Driver Successfully Registered..!",driverService.addDriver(driver));
         }catch (IOException e){
             throw new RuntimeException(e);
 
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
         }
     }
 
