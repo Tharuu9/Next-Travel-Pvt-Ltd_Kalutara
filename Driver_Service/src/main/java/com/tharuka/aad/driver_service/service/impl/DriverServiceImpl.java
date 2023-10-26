@@ -5,10 +5,12 @@ import com.tharuka.aad.driver_service.repository.DriverRepository;
 import com.tharuka.aad.driver_service.service.DriverService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class DriverServiceImpl implements DriverService {
 
     @Autowired
