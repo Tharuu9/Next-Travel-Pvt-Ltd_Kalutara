@@ -6,6 +6,8 @@ import com.tharuka.aad.guide_service.service.GuideService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class GuideServiceImpl implements GuideService {
 
@@ -35,5 +37,10 @@ public class GuideServiceImpl implements GuideService {
         guide.setStatus("Unavailable");
         updateGuide(guide);
         return guide;
+    }
+
+    @Override
+    public List<Guide> getAllGuide() {
+        return null;
     }
 }

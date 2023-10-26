@@ -2,6 +2,8 @@ package com.tharuka.aad.guide_service.service;
 
 import com.tharuka.aad.guide_service.entity.Guide;
 
+import java.util.List;
+
 public interface GuideService {
 
     Guide addGuide(Guide guide);
@@ -9,4 +11,5 @@ public interface GuideService {
     void deleteGuide(Integer guideId);
 
     Guide getAvailableGuide();
+    List<Guide> getAllGuide();
 }
