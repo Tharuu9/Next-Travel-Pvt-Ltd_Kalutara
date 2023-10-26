@@ -13,16 +13,15 @@ import lombok.NoArgsConstructor;
 public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
+    private String carName;
     private String regNumber;
     private String brand;
     private String category;
     private String fuelType;
-    private boolean hybrid;
     private String fuelUsage;
-    private String frontImgUrl;
-    private String rearImgUrl;
     private String transmissionType;
-    private int seatCapacity;
-    private String vehicleType;
+    private Integer seatCapacity;
+    private double pricePerDay;
+    private String status;
 }

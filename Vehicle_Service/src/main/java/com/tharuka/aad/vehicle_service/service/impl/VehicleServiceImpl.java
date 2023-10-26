@@ -42,4 +42,14 @@ public class VehicleServiceImpl implements VehicleService {
         return vehicleRepo.findByCategory(category);
     }
 
+    @Override
+    public List<Vehicle> fetchAllVehicle() {
+        return vehicleRepo.findAll();
+    }
+
+    @Override
+    public Object searchVehicleById(Integer id) {
+        return vehicleRepo.findById(id);
+    }
+
 }

@@ -32,4 +32,14 @@ public class VehicleController {
     public Response fetchAllVehicleByCategory(@RequestParam String category) {
         return new Response("Ok","", vehicleService.fetchAllVehicleByCategory(category));
     }
+
+    @GetMapping(value = "/fetch_all")
+    public Response fetchAllVehicle() {
+        return new Response("Ok", "", vehicleService.fetchAllVehicle());
+    }
+    @GetMapping(value ="search_Vehicle" )
+    public Response searchVehicle(Integer id){
+        return  new Response("Ok","Done..!",vehicleService.searchVehicleById(id));
+    }
+
 }
