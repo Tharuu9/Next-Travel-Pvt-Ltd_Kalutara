@@ -33,12 +33,17 @@ public class UserController {
 
     @GetMapping(value = "/fetch_users")
     public Response fetchAllUsers() {
-        return new Response("Ok","" ,userService.fetchAllUsers());
+        return new Response("OK", "", userService.fetchAllUsers());
     }
 
-    @GetMapping(value = "/check")
-    public Response checkLogin(@RequestBody LoginDTO loginDTO) {
-        return new Response("Ok","Access Checked..!",userService.checkLogin(loginDTO.getPassword(), loginDTO.getUserName()));
+    @PostMapping(value = "/check")
+    public Response checkLogin(@RequestBody LoginDTO loginDto) {
+        return new Response("OK", "Access Granted..!", userService.checkLogin(loginDto.getUserName()
+                , loginDto.getPassword()));
     }
 
+    @GetMapping(value = "/search_user")
+    public Response searchUser(@RequestParam Integer id ){
+        return  new Response("OK","Done..!",userService.searchUser(id));
+    }
 }
