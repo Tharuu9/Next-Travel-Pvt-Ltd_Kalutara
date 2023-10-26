@@ -5,10 +5,12 @@ import com.tharuka.aad.guide_service.repository.GuideRepository;
 import com.tharuka.aad.guide_service.service.GuideService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class GuideServiceImpl implements GuideService {
 
     @Autowired
@@ -41,6 +43,6 @@ public class GuideServiceImpl implements GuideService {
 
     @Override
     public List<Guide> getAllGuide() {
-        return null;
+        return guideRepository.findAll();
     }
 }
