@@ -10,7 +10,7 @@ public interface DriverService {
     boolean checkExistsDriver(Integer driverId,String name);
     void updateDriver(Driver driver);
     Driver searchDriver(Integer id);
-
-    Driver getAvailableDrive();
+    Driver getAvailableDriver();
+    void setUnavailableDriver(Integer id);
 
 }
