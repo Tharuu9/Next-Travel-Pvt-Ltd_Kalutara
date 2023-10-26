@@ -30,14 +30,14 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public void updateDriver(Driver driver) {
-        if (driverRepo.existsByIdAndName(driver.getId(), driver.getName())){
-            driverRepo.save(driver);
+        if (!driverRepo.existsById(driver.getId())){
+            throw new RuntimeException("Oops!Driver Not Found...!");
         }
-        throw new RuntimeException("Oops!Driver Not Found...!");
+        driverRepo.save(driver);
     }
 
     @Override
-    public Object searchDriver(Integer id) {
-        return driverRepo.findById(id);
+    public Driver searchDriver(Integer id) {
+        return driverRepo.findById(id).get();
     }
 }
