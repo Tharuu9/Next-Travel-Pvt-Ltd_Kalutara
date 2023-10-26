@@ -6,5 +6,5 @@ public interface GuideService {
 
     Guide addGuide(Guide guide);
     Guide updateGuide(Guide guide);
-    void deleteGuide(String guideId);
+    void deleteGuide(Integer guideId);
 }

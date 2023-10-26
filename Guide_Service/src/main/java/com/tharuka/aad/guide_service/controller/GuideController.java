@@ -20,12 +20,13 @@ public class GuideController {
     }
 
     @PutMapping(value = "/update_guide")
-    public Guide updateGuide(@RequestBody Guide guide){
-        return guideService.updateGuide(guide);
+    public Response updateGuide(@RequestBody Guide guide){
+        return new Response("OK","Guide Updated..!",guideService.updateGuide(guide));
     }
 
     @DeleteMapping("/del_guide")
-    public void deleteGuide(@RequestParam String guideId){
+    public Response deleteGuide(@RequestParam Integer guideId){
         guideService.deleteGuide(guideId);
+        return new Response("OK","Guide Deleted..!",null);
     }
 }

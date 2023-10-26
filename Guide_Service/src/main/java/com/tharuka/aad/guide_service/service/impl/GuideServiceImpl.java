@@ -22,7 +22,7 @@ public class GuideServiceImpl implements GuideService {
     }
 
     @Override
-    public void deleteGuide(String guideId) {
+    public void deleteGuide(Integer guideId) {
         guideRepository.deleteById(guideId);
     }
 }
