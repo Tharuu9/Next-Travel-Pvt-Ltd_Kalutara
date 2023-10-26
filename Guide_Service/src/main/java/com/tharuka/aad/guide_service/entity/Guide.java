@@ -1,19 +1,19 @@
 package com.tharuka.aad.guide_service.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.*;
 
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-@Document("guide")
+@Getter
+@Setter
+
 public class Guide {
 
     @Id
-    private String id;
+    private Integer id;
     private String name;
     private String address;
 }
