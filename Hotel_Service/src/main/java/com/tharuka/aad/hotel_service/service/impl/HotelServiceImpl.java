@@ -36,11 +36,11 @@ public class HotelServiceImpl implements HotelService {
 
     @Override
     public List<Hotel> findAllByStarRate(Integer starRate) {
-        return null;
+        return hotelRepository.fingAllByStarRate(starRate);
     }
 
     @Override
     public Object searchHotel(Integer id) {
-        return null;
+        return hotelRepository.findById(id);
     }
 }
