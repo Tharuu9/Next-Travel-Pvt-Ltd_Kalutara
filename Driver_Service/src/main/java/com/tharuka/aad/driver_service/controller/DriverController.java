@@ -50,11 +50,22 @@ public class DriverController {
     @PostMapping(value = "update_driver")
     public Response updateDriver(@RequestBody Driver driver){
         driverService.updateDriver(driver);
-        return new Response("Ok","Done",null);
+        return new Response("Ok","Done..!",null);
     }
     @GetMapping(value = "/search_driver")
     public Response searchDriverById(@RequestParam Integer driverId){
-        return new Response("Ok","Done",driverService.searchDriver(driverId));
+        return new Response("Ok","Done..!",driverService.searchDriver(driverId));
+    }
+
+    @GetMapping(value = "/available")
+    public Response getAvailableDriver(){
+        return new Response("OK", "Done..!", driverService.getAvailableDriver());
+    }
+
+    @PutMapping(value = "/unavailable")
+    public Response setUnavailableDriver(@RequestParam Integer id){
+        driverService.setUnavailableDriver(id);
+        return new Response("OK", "Done..!", null);
     }
 
 }
