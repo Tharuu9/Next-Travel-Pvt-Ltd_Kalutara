@@ -21,6 +21,4 @@ public class Driver {
     private String address;
     private String status;
     private String drivingLicenseImg;
-//    private String drivingLicenseFrontImg;
-//    private String drivingLicenseRearImg;
 }
