@@ -35,8 +35,12 @@ public class HotelController {
         return new Response("Ok","Done..!",hotelService.fetchAllHotel());
     }
 
-    @GetMapping(value = "/check")
-    public Boolean checkHotelExists(@RequestParam Integer hotelId,@RequestParam String name){
-        return hotelService.checkExistsHotel(hotelId,name);
+    @GetMapping
+    public Response getHotelsByCategory(@RequestParam Integer starRate) {
+        return new Response("Ok", "Done..!", hotelService.findAllByStarRate(starRate));
+    }
+    @GetMapping(value = "/search")
+    public Response searchHotelById(@RequestParam Integer id){
+        return new Response("Okay","Done..!",hotelService.searchHotel(id));
     }
 }

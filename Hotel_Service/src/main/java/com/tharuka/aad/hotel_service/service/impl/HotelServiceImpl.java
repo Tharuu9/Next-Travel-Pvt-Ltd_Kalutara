@@ -36,7 +36,7 @@ public class HotelServiceImpl implements HotelService {
 
     @Override
     public List<Hotel> findAllByStarRate(Integer starRate) {
-        return hotelRepository.fingAllByStarRate(starRate);
+        return hotelRepository.findAllByStarRate(starRate);
     }
 
     @Override

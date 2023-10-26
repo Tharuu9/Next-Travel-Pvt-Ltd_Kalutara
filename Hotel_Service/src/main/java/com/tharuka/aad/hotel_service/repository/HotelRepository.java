@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface HotelRepository extends JpaRepository<Hotel,Integer> {
 
-    List<Hotel> fingAllByStarRate(Integer statRate);
+    List<Hotel> findAllByStarRate(Integer statRate);
 }
