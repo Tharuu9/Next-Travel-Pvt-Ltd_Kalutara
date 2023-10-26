@@ -11,5 +11,7 @@ public interface GuideService {
     void deleteGuide(Integer guideId);
 
     Guide getAvailableGuide();
+    void setUnavailableGuide(String id);
     List<Guide> getAllGuide();
+    Guide getGuideById(String id);
 }

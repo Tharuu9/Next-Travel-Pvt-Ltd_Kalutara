@@ -14,15 +14,11 @@ public class GuideController {
     @Autowired
     private GuideService guideService;
 
-//    @PostMapping(value = "/add_guide")
-//    public Response addGuide(@RequestBody Guide guide){
-//        return new Response("OK","Guide Added..!",guideService.addGuide(guide));
-//    }
-
-   @PostMapping(value = "/save_guide")
-    public void saveGuide(@ModelAttribute Guide guide){
-        guideService.addGuide(guide);
+    @PostMapping(value = "/add_guide")
+    public Response addGuide(@RequestBody Guide guide){
+        return new Response("OK","Guide Added..!",guideService.addGuide(guide));
     }
+
 
     @PutMapping(value = "/update_guide")
     public Response updateGuide(@RequestBody Guide guide){
@@ -40,9 +36,20 @@ public class GuideController {
         return new Response("OK","",guideService.getAvailableGuide());
     }
 
+    @PutMapping(value = "/unavailable")
+    public Response setUnavailableGuide(@RequestParam String id) {
+        guideService.setUnavailableGuide(id);
+        return new Response("OK", "", null);
+    }
+
     @GetMapping(value = "/getGuide")
     public Response getGuide(){
        return new Response("Ok","Done..!",guideService.getAllGuide());
+    }
+
+    @GetMapping(value = "/get")
+    public Response getGuideById(@RequestParam String id) {
+        return new Response("OK", "Done", guideService.getGuideById(id));
     }
 
 }
