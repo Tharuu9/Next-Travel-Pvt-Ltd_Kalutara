@@ -41,4 +41,9 @@ public class TravelPackageServiceImpl implements TravelPackageService {
     public List<TravelPackage> fetchAllPackages(){
         return travelPackageRepository.findAll();
     }
+
+    @Override
+    public TravelPackage fetchPackageDetails(Integer id) {
+        return travelPackageRepository.findById(id).get();
+    }
 }

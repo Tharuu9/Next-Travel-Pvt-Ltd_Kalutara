@@ -30,8 +30,13 @@ public class TravelPackageController {
     }
 
     @GetMapping(value = "/get_packages")
-    public Response fetchAllPackages(){
-        return new Response("Ok","Done", travelPackageService.fetchAllPackages());
+    public Response fetchAllPackages() {
+        return new Response("Okay", "Done", travelPackageService.fetchAllPackages());
+    }
+
+    @GetMapping(value = "/get_package")
+    public Response fetchPackageDetails(@RequestParam Integer id) {
+        return new Response("Okay", "Done", travelPackageService.fetchPackageDetails(id));
     }
 
 }
