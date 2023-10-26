@@ -40,4 +40,9 @@ public class DriverServiceImpl implements DriverService {
     public Driver searchDriver(Integer id) {
         return driverRepo.findById(id).get();
     }
+
+    @Override
+    public Driver getAvailableDrive() {
+        return null;
+    }
 }

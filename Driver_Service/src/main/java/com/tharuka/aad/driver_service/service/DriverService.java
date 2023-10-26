@@ -9,5 +9,8 @@ public interface DriverService {
     List<Driver> fetchAllDriver();
     boolean checkExistsDriver(Integer driverId,String name);
     void updateDriver(Driver driver);
-    Object searchDriver(Integer id);
+    Driver searchDriver(Integer id);
+
+    Driver getAvailableDrive();
+
 }

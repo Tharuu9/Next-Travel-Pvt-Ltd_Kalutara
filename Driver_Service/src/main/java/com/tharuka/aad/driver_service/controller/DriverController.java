@@ -32,7 +32,6 @@ public class DriverController {
             return new Response("Ok","Driver Successfully Registered..!",driverService.addDriver(driver));
         }catch (IOException e){
             throw new RuntimeException(e);
-
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
