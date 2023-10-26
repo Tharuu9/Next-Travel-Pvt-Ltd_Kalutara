@@ -40,4 +40,9 @@ public class GuideController {
         return new Response("OK","",guideService.getAvailableGuide());
     }
 
+    @GetMapping(value = "/getGuide")
+    public Response getGuide(){
+       return new Response("Ok","Done..!",guideService.getAllGuide());
+    }
+
 }
