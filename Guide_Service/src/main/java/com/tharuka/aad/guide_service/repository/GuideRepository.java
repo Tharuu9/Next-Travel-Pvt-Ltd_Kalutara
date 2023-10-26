@@ -1,12 +1,12 @@
 package com.tharuka.aad.guide_service.repository;
 
 import com.tharuka.aad.guide_service.entity.Guide;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-@Repository
-public interface GuideRepository extends JpaRepository<Guide, Integer> {
+@EnableMongoRepositories
+public interface GuideRepository extends MongoRepository<Guide, Integer> {
     @Query("SELECT guide FROM Guide guide WHERE guide.status='Available'")
     Guide findFirstAvailableGuide();
 }
