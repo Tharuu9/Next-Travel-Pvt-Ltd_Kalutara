@@ -35,7 +35,12 @@ public class HotelServiceImpl implements HotelService {
     }
 
     @Override
-    public boolean checkExistsHotel(Integer hotelId, String name) {
-        return hotelRepository.existsByIdAndName(hotelId,name);
+    public List<Hotel> findAllByStarRate(Integer starRate) {
+        return null;
+    }
+
+    @Override
+    public Object searchHotel(Integer id) {
+        return null;
     }
 }
