@@ -39,10 +39,6 @@ spring:
           uri: lb://GUIDE-SERVICE
           predicates:
             - Path=/guide/**
-        - id: image-service
-          uri: file:///H:\My Projects\Next\Next_Travel\Next Travel Pvt. Ltd\Driver Service\uploads
-          predicates:
-            - Path=/uploads/**
 eureka:
   client:
     register-with-eureka: true
