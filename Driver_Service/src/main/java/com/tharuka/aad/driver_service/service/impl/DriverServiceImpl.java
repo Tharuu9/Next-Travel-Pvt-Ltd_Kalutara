@@ -43,6 +43,12 @@ public class DriverServiceImpl implements DriverService {
 
     @Override
     public Driver getAvailableDrive() {
-        return null;
+        Driver availableDriver = driverRepo.findFirstAvailableDriver();
+        if (availableDriver == null ){
+            throw new RuntimeException("Oops!There is no available Drivers at this moment..!");
+        }
+        availableDriver.setStatus("Unavailable");
+        updateDriver(availableDriver);
+        return availableDriver;
     }
 }
