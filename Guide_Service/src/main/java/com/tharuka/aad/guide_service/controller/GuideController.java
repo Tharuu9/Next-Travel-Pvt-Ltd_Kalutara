@@ -2,6 +2,7 @@ package com.tharuka.aad.guide_service.controller;
 
 import com.tharuka.aad.guide_service.entity.Guide;
 import com.tharuka.aad.guide_service.service.GuideService;
+import com.tharuka.aad.guide_service.util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +15,8 @@ public class GuideController {
     private GuideService guideService;
 
     @PostMapping(value = "/add_guide")
-    public Guide addGuide(@RequestBody Guide guide){
-        return guideService.addGuide(guide);
+    public Response addGuide(@RequestBody Guide guide){
+        return new Response("OK","Guide Added..!",guideService.addGuide(guide));
     }
 
     @PutMapping(value = "/update_guide")
