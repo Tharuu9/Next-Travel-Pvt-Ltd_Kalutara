@@ -25,4 +25,15 @@ public class GuideServiceImpl implements GuideService {
     public void deleteGuide(Integer guideId) {
         guideRepository.deleteById(guideId);
     }
+
+    @Override
+    public Guide getAvailableGuide() {
+        Guide guide = guideRepository.findFirstAvailableGuide();
+        if (guide == null){
+            throw new RuntimeException("Oops!There is no available guide at this moment");
+        }
+        guide.setStatus("Unavailable");
+        updateGuide(guide);
+        return guide;
+    }
 }

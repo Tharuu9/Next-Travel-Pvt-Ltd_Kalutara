@@ -7,4 +7,6 @@ public interface GuideService {
     Guide addGuide(Guide guide);
     Guide updateGuide(Guide guide);
     void deleteGuide(Integer guideId);
+
+    Guide getAvailableGuide();
 }

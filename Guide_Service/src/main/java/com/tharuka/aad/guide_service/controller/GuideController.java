@@ -29,4 +29,10 @@ public class GuideController {
         guideService.deleteGuide(guideId);
         return new Response("OK","Guide Deleted..!",null);
     }
+
+    @GetMapping(value = "/available")
+    public Response getAvailableGuide(){
+        return new Response("OK","",guideService.getAvailableGuide());
+    }
+
 }
