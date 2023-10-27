@@ -26,23 +26,34 @@ public class GuideServiceImpl implements GuideService {
     }
 
     @Override
-    public void deleteGuide(Integer guideId) {
+    public void deleteGuide(String  guideId) {
         guideRepository.deleteById(guideId);
     }
 
     @Override
     public Guide getAvailableGuide() {
-        Guide guide = guideRepository.findFirstAvailableGuide();
-        if (guide == null){
+        List<Guide> guideList = guideRepository.findFirstByStatus();
+        if (guideList.isEmpty()) {
             throw new RuntimeException("Oops!There is no available guide at this moment");
         }
+        Guide returningGuide = guideList.get(0);
+        return returningGuide;
+    }
+
+    @Override
+    public void setUnavailableGuide(String id) {
+        Guide guide = getGuideById(id);
         guide.setStatus("Unavailable");
-        updateGuide(guide);
-        return guide;
+        guideRepository.save(guide);
     }
 
     @Override
     public List<Guide> getAllGuide() {
         return guideRepository.findAll();
+    }
+
+    @Override
+    public Guide getGuideById(String id) {
+        return guideRepository.findById(id).get();
     }
 }

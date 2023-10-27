@@ -8,8 +8,7 @@ public interface GuideService {
 
     Guide addGuide(Guide guide);
     Guide updateGuide(Guide guide);
-    void deleteGuide(Integer guideId);
-
+    void deleteGuide(String guideId);
     Guide getAvailableGuide();
     void setUnavailableGuide(String id);
     List<Guide> getAllGuide();

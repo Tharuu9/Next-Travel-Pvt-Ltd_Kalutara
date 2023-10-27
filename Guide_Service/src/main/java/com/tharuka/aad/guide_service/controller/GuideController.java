@@ -26,7 +26,7 @@ public class GuideController {
     }
 
     @DeleteMapping("/del_guide")
-    public Response deleteGuide(@RequestParam Integer guideId){
+    public Response deleteGuide(@RequestParam String guideId){
         guideService.deleteGuide(guideId);
         return new Response("OK","Guide Deleted..!",null);
     }

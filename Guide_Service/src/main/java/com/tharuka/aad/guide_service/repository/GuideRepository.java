@@ -11,4 +11,5 @@ import java.util.List;
 public interface GuideRepository extends MongoRepository<Guide, String> {
     @Query("{'status': 'Available'}")
     List<Guide> findFirstByStatus();
+
 }
