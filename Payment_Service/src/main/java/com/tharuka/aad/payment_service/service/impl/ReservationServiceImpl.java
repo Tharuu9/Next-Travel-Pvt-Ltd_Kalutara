@@ -17,12 +17,12 @@ public class ReservationServiceImpl implements ReservationService {
     private ReservationRepository reservationRepository;
     @Override
     public Reservation makeReservation(Reservation reservation) {
-        return null;
+        return reservationRepository.save(reservation);
     }
 
     @Override
     public Reservation editReservation(Reservation reservation) {
-        return null;
+        return reservationRepository.save(reservation);
     }
 
     @Override
